@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('app_template');
 });
 
-Route::get('-formalpendidikan',  function () {
+Route::get('pendidikan-formal',  function () {
     return view('pages.formPendidikan');
 });
 

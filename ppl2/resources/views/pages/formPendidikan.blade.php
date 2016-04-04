@@ -74,6 +74,7 @@
 		    <button type="submit" class="btn btn-sm btn-info">Kirim</button>
 		  </div>
 		</div>
+		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 	</form>
 </div>
 </div>
