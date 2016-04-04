@@ -60,7 +60,7 @@
             <ul class="dropdown-menu" role="menu">
               
               <li>
-                <a href="{{URL::to('pendidikan-formal/all')}}">
+                <a href="{{URL::to('pendidikan-formal')}}">
                   <span>Pendidikan Formal</span>
                 </a>
               </li>
