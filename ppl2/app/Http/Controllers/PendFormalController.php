@@ -8,6 +8,7 @@ use App\Http\Requests;
 
 use App\PendidikanFormal;
 
+use Session;
 
 class PendFormalController extends Controller
 {
@@ -39,9 +40,8 @@ class PendFormalController extends Controller
         $formal->no_ijazah = $request->input('no_ijazah');
         $formal->tahun = $request->input('tahun');
         $formal->save();
-
-    	return \Redirect::to('pendidikan-formal')
-    	->with('message', 'Berhasil ditambahkan');
+        Session::flash('message', 'Pendidikan formal berhasil ditambahkan');
+    	return \Redirect::to('pendidikan-formal');
     }
 
     public function update(Request $request, $id) {
@@ -57,14 +57,14 @@ class PendFormalController extends Controller
         $formal->tahun = $request->input('tahun');
         $formal->save();
 
-        return \Redirect::to('pendidikan-formal')
-        ->with('message', 'Berhasil diperbaharui');
+       Session::flash('message', 'Pendidikan formal berhasil diperbaharui');
+        return \Redirect::to('pendidikan-formal');
     }
 
     public function delete($id) {
         $formal = PendidikanFormal::find($id);
         $formal->delete();
-        return \Redirect::to('pendidikan-formal')
-        ->with('message', 'Berhasil dihapus');
+        Session::flash('message', 'Pendidikan formal berhasil dihapus');
+        return \Redirect::to('pendidikan-formal');
     }
 }

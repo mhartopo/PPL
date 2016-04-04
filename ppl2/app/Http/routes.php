@@ -15,11 +15,13 @@ Route::get('/', function () {
     return view('app_template');
 });
 
-Route::get('pendidikan-formal',  function () {
-    return view('pages.formPendidikan');
-});
+Route::get('pendidikan-formal', 'PendFormalController@getAll');
 
 Route::get('pendidikan-formal/all','PendFormalController@getAll');
+
+Route::get('pendidikan-formal/new', function() {
+	return view('pages.formPendidikan');
+});
 
 Route::delete('pendidikan-formal/delete/{id}', 'PendFormalController@delete');
 

@@ -17,7 +17,7 @@
 		<div class="form-group">
 		  <label class="col-lg-2 control-label">NIP</label>
 		  <div class="col-lg-8">
-		    <input type="text" class="form-control" placeholder="NIP" name="nip" disabled value="{{$pend->nip}}"></input>
+		    <input type="text" class="form-control" placeholder="NIP" name="nip" value="{{$pend->nip}}" readonly></input>
 		  </div>
 		</div>
 		<div class="form-group">

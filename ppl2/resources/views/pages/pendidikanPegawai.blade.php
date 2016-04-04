@@ -8,9 +8,19 @@
   <h2>Pendidikan Pegawai</h2>
 @stop
 
+
 @section('content')
 <div class="panel panel-default">
+    
+    @if (Session::has('message'))
+          <div class="alert alert-info fade in">{{ Session::get('message') }}
+            <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+          </div>
+    @endif
+    <br>
     <div class="panel-heading font-semibold">
+      <!-- Tampilkan Pesan -->
+      
       Tabel Pendidikan 
       @if($nip == null)
         Semua Pegawai
