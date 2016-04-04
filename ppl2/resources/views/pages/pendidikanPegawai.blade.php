@@ -14,8 +14,21 @@
       <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
     </div>
   @endif
-    <button class="btn m-b-sm m-r-sm btn-success" onclick="location.href = '{{URL::to('/')}}/pendidikan-formal/new';"><i class="m-r-xs fa fa-plus"></i>Tambahkan Pendidikan</button>
-  </br>
+  <div class="row">
+    <div class="col-md-3">
+      <button class="btn m-b-sm m-r-sm btn-success" onclick="location.href = '{{URL::to('/')}}/pendidikan-formal/new';"><i class="m-r-xs fa fa-plus"></i>Tambahkan Pendidikan</button>
+    </div>
+    <div class="col-md-6">
+      <form action = "{{URL::to('/')}}/pendidikan-formal/search" method="GET">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Cari berdasarkan NIP" name="query" required> 
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="submit">Go!</button>
+        </span>
+      </div>
+    </form>
+    </div>
+  </div>
 @stop
 
 @section('content')
@@ -75,5 +88,4 @@
         </tbody>
       </table>
     </div>
-
 @stop

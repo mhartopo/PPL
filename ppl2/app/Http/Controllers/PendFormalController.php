@@ -67,4 +67,9 @@ class PendFormalController extends Controller
         Session::flash('message', 'Pendidikan formal berhasil dihapus');
         return \Redirect::to('pendidikan-formal');
     }
+
+    public function search(Request $request) {
+        $res = $request->input('query');
+        return \Redirect::to('pendidikan-formal/all/'.$res);   
+    }
 }
