@@ -23,9 +23,11 @@ Route::get('pendidikan-formal/all','PendFormalController@getAll');
 
 Route::delete('pendidikan-formal/delete/{id}', 'PendFormalController@delete');
 
-Route::post('pendidikan-formal/update/{id}', 'PendFormalController@update');
+Route::post('pendidikan-formal/{id}/update', 'PendFormalController@update');
 
-Route::get('pendidikan-formal/{nip}/edit','PendFormalController@getPendidikan');
+Route::get('pendidikan-formal/{id}/edit','PendFormalController@edit');
+
+Route::get('pendidikan-formal/{id}/delete','PendFormalController@getPendidikan');
 
 Route::get('pendidikan-formal/{nip}','PendFormalController@getPendidikan');
 
