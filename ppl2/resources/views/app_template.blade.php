@@ -186,8 +186,8 @@
       </div>
 		  
 		<div class="wrapper-lg bg-light">
-			<div class="col-md-12 padder-v">
-				
+      @yield('head_content')
+      <div class="col-md-12 padder-v">
 				@yield('content')
 			
 			</div>

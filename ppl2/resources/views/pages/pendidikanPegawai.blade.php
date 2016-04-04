@@ -1,23 +1,25 @@
 @extends('app_template')
 
-@section('tiitle')
+@section('title')
   Pendidikan Pegawai
 @stop
 
 @section('page_title')
   <h2>Pendidikan Pegawai</h2>
 @stop
-
+  
+@section('head_content')
+  @if (Session::has('message'))
+    <div class="alert alert-info fade in">{{ Session::get('message') }}
+      <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+    </div>
+  @endif
+    <button class="btn m-b-sm m-r-sm btn-success" onclick="location.href = '{{URL::to('/')}}/pendidikan-formal/new';"><i class="m-r-xs fa fa-plus"></i>Tambahkan Pendidikan</button>
+  </br>
+@stop
 
 @section('content')
 <div class="panel panel-default">
-    
-    @if (Session::has('message'))
-          <div class="alert alert-info fade in">{{ Session::get('message') }}
-            <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
-          </div>
-    @endif
-    <br>
     <div class="panel-heading font-semibold">
       <!-- Tampilkan Pesan -->
       
